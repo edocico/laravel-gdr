@@ -18,6 +18,13 @@
                           <p class="card-text">Hp: {{$character->hp}}</p>
                         </div>
                         <button><a href="{{route('characters.edit', $character)}}">EDIT</a></button>
+                        <form action="{{ route('characters.destroy', $character) }}" method="POST">
+                            @csrf
+                            @method('DELETE')
+
+                            <button class="btn btn-danger" type="submit">delete</button>
+
+                        </form>
                     </div>
                 </div>
             @endforeach
