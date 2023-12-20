@@ -12,14 +12,14 @@ class PageController extends Controller
     public function index()
     {
         $characters = Character::all();
-        $characters = $this->uppercase($characters);
+        // $characters = $this->uppercase($characters);
         return view('guest.index', compact('characters'));
     }
 
-    private function uppercase($characters)
-    {
+    // private function uppercase($characters)
+    // {
 
-    }
+    // }
 
     // public function dashboard()
     // {
