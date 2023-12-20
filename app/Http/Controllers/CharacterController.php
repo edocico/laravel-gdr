@@ -1,7 +1,10 @@
 <?php
 
+
 namespace App\Http\Controllers;
 
+use App\Http\Requests\StoreCharacterRequest;
+use App\Http\Requests\UpdateCharacterRequest;
 use App\Models\Character;
 use Illuminate\Http\Request;
 
@@ -23,8 +26,9 @@ class CharacterController extends Controller
         return view('characters.create');
     }
 
-    public function store(Request $request){
+    public function store(StoreCharacterRequest $request){
         $data = $request->all();
+
         $new_character = Character::create($data);
         return redirect()->route('characters.show', $new_character);
     }
@@ -33,7 +37,7 @@ class CharacterController extends Controller
         return view('characters.edit', compact('character'));
     }
 
-    public function update(Request $request, Character $character){
+    public function update(UpdateCharacterRequest $request, Character $character){
         $data = $request->all();
         
         $character->update($data);
