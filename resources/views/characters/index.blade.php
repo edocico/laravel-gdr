@@ -2,6 +2,7 @@
 
 @section('content')
     <div class="container">
+        <button><a href="{{route('characters.create')}}">Sezione create</a></button>
         <div class="row row-gap-5">
             @foreach($characters as $character)
                 <div class="col-3">
