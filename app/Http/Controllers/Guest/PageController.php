@@ -27,4 +27,6 @@ class PageController extends Controller
     //     $users = User::all();
     //     return view('guest.dashboard', compact('characters','users'));
     // }
+
+    
 }
