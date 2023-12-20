@@ -18,4 +18,14 @@ class CharacterController extends Controller
         return view('characters.show', compact('character'));
 
     }
+
+    public function create(){
+        return view('characters.create');
+    }
+
+    public function store(Request $request){
+        $data = $request->all();
+        $new_character = Character::create($data);
+        return redirect()->route('characters.show', $new_character);
+    }
 }
