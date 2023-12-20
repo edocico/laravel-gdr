@@ -17,6 +17,7 @@
                           <p class="card-text">Speed: {{$character->speed}}</p>
                           <p class="card-text">Hp: {{$character->hp}}</p>
                         </div>
+                        <button><a href="{{route('characters.edit', $character)}}">EDIT</a></button>
                     </div>
                 </div>
             @endforeach

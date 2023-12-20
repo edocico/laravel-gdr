@@ -28,4 +28,16 @@ class CharacterController extends Controller
         $new_character = Character::create($data);
         return redirect()->route('characters.show', $new_character);
     }
+
+    public function edit(Character $character){
+        return view('characters.edit', compact('character'));
+    }
+
+    public function update(Request $request, Character $character){
+        $data = $request->all();
+        
+        $character->update($data);
+
+        return redirect()->route('characters.index', $character);
+    }
 }
