@@ -1,15 +1,15 @@
 @extends('layouts.app')
 
 @section('content')
+<button><a href="{{route('characters.index')}}">Sezione comics</a></button>
     <div class="container">
         <div class="row row-gap-5">
-            @foreach($characters as $character)
-                <div class="col-3">
+            
+            
+                <div class="col-8">
                     <div class="card h-100" style="width: 18rem;">
                         <div class="card-body">
-                          <h5 class="card-title">
-                            <a href="{{ route('characters.show', $character) }}">{{$character->name}}</a>
-                          </h5>
+                          <h5 class="card-title">{{$character->name}}</h5>
 
                           <p class="card-text">Bio: {{$character->bio}}</p>
                           <p class="card-text">Defense: {{$character->defense}}</p>
@@ -18,7 +18,7 @@
                         </div>
                     </div>
                 </div>
-            @endforeach
+           
         </div>
     </div>
 @endsection
