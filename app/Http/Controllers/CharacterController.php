@@ -12,4 +12,10 @@ class CharacterController extends Controller
 
         return view('characters.index', compact('characters'));
     }
+
+    public function show(Character $character) {
+
+        return view('characters.show', compact('character'));
+
+    }
 }
