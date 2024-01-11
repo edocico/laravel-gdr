@@ -1,10 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<button><a href="{{route('characters.index')}}">Sezione comics</a></button>
+<button><a href="{{route('projects.index')}}">Sezione comics</a></button>
     <div class="container">
         <div class="row row-gap-5">
-            
             
                 <div class="col-8">
                     <div class="card h-100" style="width: 18rem;">
