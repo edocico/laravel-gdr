@@ -14,6 +14,8 @@
                           <p class="card-text">Defense: {{$character->defense}}</p>
                           <p class="card-text">Speed: {{$character->speed}}</p>
                           <p class="card-text">Hp: {{$character->hp}}</p>
+                          <p class="card-text">Type: {{$character->type->name ?? '/'}}</p>
+                          <p class="card-text">Description: {{$character->type->description ?? '/'}}</p>
                         </div>
                     </div>
                 </div>

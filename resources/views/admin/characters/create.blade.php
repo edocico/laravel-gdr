@@ -31,6 +31,17 @@
         <input type="number" class="form-control" name="hp" id="hp" placeholder="hp character" value="{{ old('hp') }}">
       </div>
       
+      <div class="mb-3">
+        <label for="title" class="form-label text-light">Seleziona una classe</label>
+        <select name="type_id" class="form-control" id="type_id">
+            <option disabled selected value>Seleziona una classe</option>
+            
+            @foreach($types as $type)
+            <option @selected( old('type_id') == $type->id ) value="{{ $type->id }}">{{ $type->name }}</option>
+            @endforeach
+        </select>
+      </div>
+
       <div class="">
         <input type="submit" class="btn btn-primary" value="crea">
       </div>

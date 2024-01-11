@@ -8,5 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Character extends Model
 {
     use HasFactory;
-    protected $fillable = ['name', 'bio', 'speed', 'defense', 'hp'];
+    protected $fillable = ['name', 'bio', 'speed', 'defense', 'hp', 'type_id'];
+
+    public function type(){
+        return $this->belongsTo(Type::class);
+    }
 }

@@ -20,7 +20,7 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        $this->call([CharacterSeeder::class]);
+        $this->call([TypeSeeder::class, CharacterSeeder::class ]);
         
         // php artisan migrate:fresh --seed ---comando per pulire dB
     }

@@ -29,6 +29,7 @@ class UpdateCharacterRequest extends FormRequest
                 'speed'=>['required','min:1','max:100','numeric'],
                 'defense'=>['required','min:1','max:100','numeric'] ,
                 'hp'=>['required','min:100','max:1000','numeric'] ,
+                'type_id'=>['required','exists:types,id'],
             
         ];
     }
