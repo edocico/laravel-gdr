@@ -5,7 +5,7 @@
 <section class="py-5">
   <div class="container">
     <h1>Page EDIT</h1>
-    <form action="{{ route('characters.update', $character ) }}" method="POST" >
+    <form action="{{ route('admin.characters.update', $character ) }}" method="POST" >
 
       @csrf
       @method('PUT')
