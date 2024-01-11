@@ -9,7 +9,7 @@
         <div class="col">
             <div class="card">
                 <div class="card-header">{{ __('User Dashboard') }}</div>
-
+                <button><a href="{{route('admin.characters.index')}}">Sezione comics</a></button>
                 <div class="card-body">
                     @if (session('status'))
                     <div class="alert alert-success" role="alert">
