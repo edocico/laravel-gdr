@@ -11,6 +11,17 @@
                           <h5 class="card-title">{{$character->name}}</h5>
 
                           <p class="card-text">Bio: {{$character->bio}}</p>
+                          <p>
+                            <div class="d-flex">
+                                <ul>
+                                    @foreach($character->items as $item)
+                                
+                                    <li class="badge rounded-pill text-bg-primary">{{$item->name}}</li>
+    
+                                    @endforeach
+                                </ul>
+                            </div>    
+                          </p>
                           <p class="card-text">Defense: {{$character->defense}}</p>
                           <p class="card-text">Speed: {{$character->speed}}</p>
                           <p class="card-text">Hp: {{$character->hp}}</p>

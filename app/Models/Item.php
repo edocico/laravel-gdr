@@ -9,6 +9,12 @@ class Item extends Model
 {
     use HasFactory;
 
+    protected $fillable = [ 
+        'name',
+        'description',
+        'price'
+    ];
+
     public function characters() {
         return $this->belongsToMany(Character::class);
     }

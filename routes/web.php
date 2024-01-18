@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CharacterController;
+use App\Http\Controllers\Admin\ItemController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Guest\PageController;
 use App\Models\Character;
@@ -52,6 +53,7 @@ Route::middleware(['auth', 'verified'])
 
     Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('characters', CharacterController::class);
+    Route::resource('items', ItemController::class);
 
 
 });
