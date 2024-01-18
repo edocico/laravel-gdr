@@ -12,6 +12,20 @@
                             <a href="{{ route('admin.characters.show', $character) }}">{{$character->name}}</a>
                           </h5>
 
+                        <div class="d-flex">
+                            <ul>
+                                @foreach($character->items as $item)
+                            
+                                <li class="badge rounded-pill text-bg-primary"> 
+                                    <a class="text-light" href="{{ route('admin.items.show', $item) }}">
+                                        {{$item->name}}
+                                    </a>
+                                </li>
+
+                                @endforeach
+                            </ul>
+                        </div>
+                      
                           <p class="card-text">Bio: {{$character->bio}}</p>
                           <p class="card-text">Defense: {{$character->defense}}</p>
                           <p class="card-text">Speed: {{$character->speed}}</p>

@@ -17,6 +17,28 @@
         <textarea class="form-control" name="bio" id="bio" rows="3" placeholder="biografia" >{{ old('bio') }}</textarea>
 
       </div>
+
+      <div class="form-group mb-3">
+        <p>Seleziona la items:</p>
+        <div class="d-flex flex-wrap gap-4">
+          @foreach($items as $item)
+            <div class="form-check">
+              <input 
+                name='items[]' 
+                class="form-check-input" 
+                type="checkbox" 
+                value="{{$item->id}}" 
+                id="item-{{$item->id}}" 
+                @checked(in_array($item->id, old('items', [])))
+              >
+              <label class="form-check-label" for="item-{{$item->id}}">
+                {{$item->name}}
+              </label>
+            </div>
+          @endforeach
+        </div>
+      </div>
+
       <div class="mb-3">
         <label for="defense" class="form-label">defense</label>
         <input type="number" class="form-control" name="defense" id="defense" placeholder="defense character" value="{{ old('defense') }}">
